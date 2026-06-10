@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+
+\usepackage[fontset=fandol]{ctex}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{verbatim}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!55!black,
+    urlcolor=blue!55!black
+}
+
+\newtcolorbox{knowledgebox}[1]{
+    breakable, colback=blue!5!white, colframe=blue!70!black,
+    colbacktitle=blue!70!black, coltitle=white, fonttitle=\bfseries,
+    title=#1, boxrule=0.8pt, sharp corners
+}
+
+\newtcolorbox{importantbox}[1]{
+    breakable, colback=yellow!10!white, colframe=yellow!75!black,
+    colbacktitle=yellow!75!black, coltitle=black, fonttitle=\bfseries,
+    title=#1, boxrule=0.8pt, sharp corners
+}
+
+\newtcolorbox{warningbox}[1]{
+    breakable, colback=red!5!white, colframe=red!70!black,
+    colbacktitle=red!70!black, coltitle=white, fonttitle=\bfseries,
+    title=#1, boxrule=0.8pt, sharp corners
+}
+
+\newtcolorbox{dialoguebox}[1]{
+    breakable, colback=green!4!white, colframe=green!45!black,
+    colbacktitle=green!45!black, coltitle=white, fonttitle=\bfseries,
+    title=#1, boxrule=0.8pt, sharp corners
+}
+
+\newcommand{\notetitle}{本地视频讲义：[在此填写主题]}
+\newcommand{\noteauthors}{五道口纳什 \& Codex}
+\newcommand{\notedate}{\today}
+\newcommand{\videosource}{[在此填写本地视频文件名或路径]}
+\newcommand{\videoduration}{[在此填写视频时长]}
+\newcommand{\videoresolution}{[在此填写分辨率]}
+\newcommand{\transcriptsource}{[在此填写字幕或转写来源]}
+\newcommand{\videocoverpath}{}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace{1.0cm}
+{\huge\bfseries \notetitle\par}
+\vspace{0.7cm}
+{\large \noteauthors\par}
+\vspace{0.25cm}
+{\large \notedate\par}
+\vspace{0.9cm}
+
+\ifdefempty{\videocoverpath}{
+{\small 未提供封面；请在生成讲义时填入抽取的本地封面帧路径。\par}
+}{
+\includegraphics[width=0.86\textwidth,height=0.45\textheight,keepaspectratio]{\videocoverpath}\par
+}
+
+\vfill
+\begin{tcolorbox}[width=0.92\textwidth, colback=black!2!white, colframe=black!55, sharp corners]
+\textbf{视频来源}：\videosource\par
+\textbf{视频时长}：\videoduration\par
+\textbf{分辨率}：\videoresolution\par
+\textbf{字幕/转写来源}：\transcriptsource\par
+\end{tcolorbox}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%% --- 正文内容开始 ---
+
+% Replace this block with generated notes.
+% Keep images outside knowledgebox/importantbox/warningbox/dialoguebox.
+% For any figure from a local video frame or crop, include source time provenance:
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=\textwidth]{assets/example.jpg}
+% \caption{图像说明。\protect\footnotemark}
+% \end{figure}
+% \footnotetext{本地视频画面时间区间：00:12:31--00:12:46。}
+
+\section{概览}
+
+请将这一段替换为根据本地视频生成的中文讲义内容。
+
+\subsection{本章小结}
+
+请将这一段替换为本章小结。
+
+\section{总结与延伸}
+
+请将这一段替换为最终综合总结。
+
+%% --- 正文内容结束 ---
+
+\end{document}
