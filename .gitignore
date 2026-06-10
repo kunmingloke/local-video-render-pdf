@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+work/
+outputs/
+*.tmp
+*.bak
