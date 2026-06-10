@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local Video Render PDF"
+  short_description: "Turn local videos into Chinese PDF notes"
+  default_prompt: "Use $local-video-render-pdf to turn a local video file in the current workspace into Chinese teaching notes and a compiled PDF."
